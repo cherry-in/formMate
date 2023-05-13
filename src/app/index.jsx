@@ -4,12 +4,12 @@ import history from "../history";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
-import Login from '../pages/Login';
-import SignUp from "../pages/SignUp";
-import Main from "../pages/Main";
-import Search from "../pages/Search";
-import Workspace from "../pages/Workspace";
-import Mypage from "../pages/Mypage";
+import Login from '../pages/Login/index';
+import SignUp from "../pages/SignUp/index";
+import Main from "../pages/Main/index";
+import Search from "../pages/Search/index";
+import Workspace from "../pages/Workspace/index";
+import Mypage from "../pages/Mypage/index";
 
 function App() {
     return (
