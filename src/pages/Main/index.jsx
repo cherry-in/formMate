@@ -11,14 +11,15 @@ const Main = () => {
     return <>
         <div className="h-100">
             <Nav />
-            <div className="container-tight py-6">
-                <div className="card">
-                    <div className="card-body">
-                        <p className="text-">복작하고 어려운 계약서 작성은</p>
-                        <h1 className="card-title">
+            <div className="filling"></div>
+            <div className="container-tight py-6 main-container">
+                <div className="card main-card">
+                    <div className="card-body main-card-body">
+                        <p className="main-card-body-text text-">복잡하고 어려운 계약서 작성은</p>
+                        <h1 className="main-card-body-title card-title">
                             FormMate에게 <br />맡기자!
                         </h1>
-                        <a href="/workspace/new" className="btn btn-primary">계약서 작성하러 가기</a>
+                        <a href="/workspace/new" className="main-card-btn btn btn-primary">계약서 작성하러 가기</a>
                     </div>
                 </div>
             </div>
