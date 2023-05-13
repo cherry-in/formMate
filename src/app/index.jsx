@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./app.scss"
-import history from "../../history";
+import history from "../history";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 

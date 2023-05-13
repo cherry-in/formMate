@@ -1,6 +1,10 @@
 $primary: #04234b;
 $danger:#cd201f;
 
+body, #root{
+    height: 100vh;
+}
+
 @import "scss/glossary-modal";
 @import "scss/tabler";
 @import "scss/tabler-buttons";

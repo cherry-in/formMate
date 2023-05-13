@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.scss';
 
 const Main = () => {
 
@@ -19,8 +20,7 @@ const Main = () => {
 
 
     return <>
-        <div className="flex-fill d-flex flex-column bg-red h-100 justify-content-center">
-
+        <div className="flex-fill d-flex flex-column h-100 justify-content-center">
             <div className="container-tight py-6">
                 <form className="card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
                     <div className="card-body">

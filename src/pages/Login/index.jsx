@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './styles.scss';
 
-const Workspace = () => {
+const Login = () => {
 
     const [form, setForm] = useState({
         email: '',
@@ -24,7 +25,7 @@ const Workspace = () => {
             <div className="container-tight py-6">
                 <form className="card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
                     <div className="card-body">
-                        <h2 className="mb-5 text-center text-uppercase">Workspace</h2>
+                        <h2 className="mb-5 text-center text-uppercase">Login</h2>
 
                         <div className="mb-3">
                             <label className="form-label">E-Mail</label>
@@ -72,4 +73,4 @@ const Workspace = () => {
     </>
 }
 
-export default Workspace;
+export default Login;
