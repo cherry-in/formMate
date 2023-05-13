@@ -1,3 +1,11 @@
+$primary: #3A5297;
+$danger: #cd201f;
+
+body,
+#root {
+    height: 100vh;
+}
+
 @import "scss/glossary-modal";
 @import "scss/tabler";
 @import "scss/tabler-buttons";
@@ -11,10 +19,3 @@
 @import "scss/inbox-chat";
 @import "scss/record-pulse";
 @import 'bootstrap/dist/css/bootstrap.min.css';
-
-$primary: #3A5297;
-$danger:#cd201f;
-
-body, #root{
-    height: 100vh;
-}
