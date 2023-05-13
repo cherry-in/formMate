@@ -5,12 +5,18 @@ import Footer from "../../component/Footer/index";
 import Cards from '../../component/CardGrid';
 import Category from '../../component/Category';
 import SearchInput from '../../component/SearchInput';
+import axios from 'axios';
+import { BACKEND_URI } from '../../constant';
 
 const Search = () => {
     const [list, setList] = useState([])
     const data = [{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }];
     useEffect(() => {
         ///api
+        axios.get(`${BACKEND_URI}/`, { 'Content-Type': 'application/json' },).then(({ data }) => {
+            console.log(data);
+            return JSON.stringify(data, null, 2);
+        }).catch(err => console.error(err));
         setList(data);
     }, []);
     const add = () => { setList([...list, ...data]) }
