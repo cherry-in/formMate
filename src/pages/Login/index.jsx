@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import Nav from '../../component/Nav/index';
+import './styles.scss';
 
 const Login = () => {
 
@@ -23,9 +23,12 @@ const Login = () => {
     return <>
         <div className="">
             <Nav />
-            <div className="">
-                <form className="card card-md needs-validation" onSubmit={submit} autoComplete="on" noValidate>
+            <div className="" /* style="position:relative" */>
+                <div className="filling"></div>
+                <form className="card card-md bg-transparent needs-validation" onSubmit={submit} autoComplete="on" /* style="position:absolute" */ noValidate>
                     <div className="card-body">
+                        <div class="bg-img"></div>
+
                         <h3 className="text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
                         <h1 className='text-blue text-center mb-5'>FormMate와 함께!</h1>
 
