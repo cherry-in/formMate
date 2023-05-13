@@ -13,7 +13,7 @@ const SearchInput = () => {
 
     return (
         <div className="d-flex justify-content-between px-3">
-            <select name="type" defaultValue="1" className='btn btn-white mx-2 col-2'>
+            <select name="type" defaultValue="1" className='btn btn-pill btn-white mx-2 col-2'>
                 <option value="1">유형</option>
                 <option value="">옵션1</option>
                 <option value="">옵션2</option>
