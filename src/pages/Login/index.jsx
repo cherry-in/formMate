@@ -25,8 +25,8 @@ const Login = () => {
             <Nav />
             <div className="" /* style="position:relative" */>
                 <div className="filling"></div>
-                <form className="card card-md bg-transparent needs-validation" onSubmit={submit} autoComplete="on" /* style="position:absolute" */ noValidate>
-                    <div className="card-body">
+                <form className="login-card card-md bg-transparent needs-validation" onSubmit={submit} autoComplete="on" /* style="position:absolute" */ noValidate>
+                    <div className="login-card-body">
                         <div class="bg-img"></div>
 
                         <h3 className="text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
@@ -34,7 +34,7 @@ const Login = () => {
 
                         <div className="mb-3">
                             <input
-                                className="form-control has-error"
+                                className="login-input form-control has-error"
                                 name="email"
                                 type="email"
                                 placeholder="아이디"
@@ -47,7 +47,7 @@ const Login = () => {
                         <div className="mb-2">
                             <input
                                 type="password"
-                                className="form-control has-error"
+                                className="login-input form-control has-error"
                                 name="password"
                                 placeholder="비밀번호"
                                 onChange={handleChange}

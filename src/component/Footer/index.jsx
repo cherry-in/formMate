@@ -3,8 +3,8 @@ import './styles.scss';
 
 const Footer = () => {
   return (
-    <div className='mt-auto p-5 text-white bg-primary d-flex flex-column justify-content-around'>
-      <h3 className=''>계약라이터</h3>
+    <div className='mt-auto p-5 text-white bg-primary d-flex flex-column'>
+      <h3 className='text-white'>계약라이터</h3>
       <table>
         <tbody>
           <tr>

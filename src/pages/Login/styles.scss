@@ -4,7 +4,7 @@
     font-family: 'Noto Sans KR', sans-serif
 }
 
-input, button {
+.login-input, button {
     font: inherit;
 }
 
@@ -14,7 +14,7 @@ input, button {
     background-color: #3a5297;
 }
 
-.card{
+.login-card{
     margin:auto;
     display: block;
     width:880px;
@@ -25,7 +25,7 @@ input, button {
     border:none;
 }
 
-.card-body{
+.login-card-body{
     border:none;
     border-radius: 20px;
     width:880px;
@@ -42,7 +42,7 @@ input, button {
 
 
 
-.card .bg-img {
+.login-card .bg-img {
     background-color:white;
     background-image: url("https://i.ibb.co/KwGZHQr/image.png");
     width:140px;
@@ -79,7 +79,7 @@ h1{
 }
 
 
-.card .form-control{
+.login-card .form-control{
     border-style: solid;
     border-radius: 30px;
     border-color: #3a5297;
