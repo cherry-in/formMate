@@ -3,6 +3,7 @@ import './styles.scss';
 import axios from '../../axios'
 import Nav from '../../component/Nav/index';
 import bcrypt from 'bcryptjs'
+import { BACKEND_URI } from '../../constant';
 
 const salt = bcrypt.genSaltSync(10)
 
@@ -14,23 +15,20 @@ const SignUp = () => {
         password: '',
         birth: '',
         sex: '',
+        contact: '',
         address: '',
         job: '',
         purpose: '',
     })
 
-    const signUp = async () => {
-        return axios.post('', { 'Content-Type': 'application/json' },).then(({ data }) => {
-            console.log(data);
-            return JSON.stringify(data, null, 2);
-        }).catch(err => console.error(err));
-    }
-
     const submit = (e) => {
         let hashingForm = form;
         hashingForm.password = bcrypt.hashSync(form.password, '$2a$10$CwTycUXWue0Thq9StjUM0u')
         e.preventDefault();
-        console.log(hashingForm);
+        return axios.post(`${BACKEND_URI}/auth/register`, hashingForm, { 'Content-Type': 'application/json' },).then(({ data }) => {
+            console.log(data);
+            return JSON.stringify(data, null, 2);
+        }).catch(err => console.error(err));
     }
 
     const handleChange = (e) => {
@@ -132,6 +130,20 @@ const SignUp = () => {
                                 XXXXXX
                                 <div className="invalid-feedback">Password Field is required.</div>
                             </div>
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">연락처</label>
+                            <input
+                                className="form-control has-error"
+                                name="contact"
+                                type="text"
+                                placeholder="연락처"
+                                autoComplete="off"
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="invalid-feedback">Address field required.</div>
                         </div>
 
                         <div className="mb-3">

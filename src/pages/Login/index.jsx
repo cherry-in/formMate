@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Nav from '../../component/Nav/index';
 import './styles.scss';
 import bcrypt from 'bcryptjs'
+import axios from 'axios';
+import { BACKEND_URI } from '../../constant';
 
 const salt = bcrypt.genSaltSync(10)
 
@@ -17,6 +19,10 @@ const Login = () => {
         let hashingForm = form;
         hashingForm.password = bcrypt.hashSync(form.password, '$2a$10$CwTycUXWue0Thq9StjUM0u')
         e.preventDefault();
+        return axios.post(`${BACKEND_URI}/auth/login`, hashingForm, { 'Content-Type': 'application/json' },).then(({ data }) => {
+            console.log(data);
+            return JSON.stringify(data, null, 2);
+        }).catch(err => console.error(err));
         console.log(hashingForm);
     }
 
