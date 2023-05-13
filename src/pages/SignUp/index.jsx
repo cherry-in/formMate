@@ -31,34 +31,20 @@ const SignUp = () => {
 
     return <>
         <div className="flex-fill d-flex flex-column justify-content-center">
-
+            <Nav />
             <div className="container-tight py-6">
                 <form className="card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
                     <div className="card-body">
-                        <h2 className="mb-5 text-center text-uppercase">Signup</h2>
+                        <h3 className="text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
+                        <h1 className='text-blue text-center mb-5'>FormMate와 함께!</h1>
 
                         <div className="mb-3">
-                            <label className="form-label">E-Mail</label>
-                            <input
-                                className="form-control has-error"
-                                name="name"
-                                type="name"
-                                placeholder="Enter your Name"
-                                autoComplete="off"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">E-Mail field required.</div>
-                        </div>
-
-
-                        <div className="mb-3">
-                            <label className="form-label">E-Mail</label>
+                            <label className="form-label">이메일 주소</label>
                             <input
                                 className="form-control has-error"
                                 name="email"
                                 type="email"
-                                placeholder="Enter your email address"
+                                placeholder="이메일"
                                 autoComplete="off"
                                 onChange={handleChange}
                                 required
@@ -66,15 +52,43 @@ const SignUp = () => {
                             <div className="invalid-feedback">E-Mail field required.</div>
                         </div>
 
+                        <div className="mb-3">
+                            <label className="form-label">이름</label>
+                            <input
+                                className="form-control has-error"
+                                name="name"
+                                type="name"
+                                placeholder="이름"
+                                autoComplete="off"
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="invalid-feedback">Name field required.</div>
+                        </div>
+
                         <div className="mb-2">
                             <label className="form-label">
-                                Password
-                        </label>
+                                비밀번호
+                            </label>
                             <input
                                 type="password"
                                 className="form-control has-error"
                                 name="password"
-                                placeholder="Password"
+                                placeholder="비밀번호"
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="invalid-feedback">Password Field is required.</div>
+                        </div>
+                        <div className="mb-2">
+                            <label className="form-label">
+                                비밀번호 재확인
+                            </label>
+                            <input
+                                type="password"
+                                className="form-control has-error"
+                                name="password"
+                                placeholder="비밀번호"
                                 onChange={handleChange}
                                 required
                             />
@@ -83,34 +97,111 @@ const SignUp = () => {
 
                         <div className="mb-2">
                             <label className="form-label">
-                                Date
-                        </label>
+                                주민등록번호 (뒷자리 첫번째까지)
+                            </label>
+                            <div className='d-flex'>
+                                <input
+                                    type="text"
+                                    className="form-control has-error"
+                                    name="birth"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <div className="invalid-feedback">Password Field is required.</div>
+                                <div className='p-2'>-</div>
+                                <input
+                                    type="text"
+                                    className="form-control has-error w-1"
+                                    name="sex"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    required
+                                />
+                                XXXXXX
+                                <div className="invalid-feedback">Password Field is required.</div>
+                            </div>
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label">주소</label>
                             <input
-                                type="date"
                                 className="form-control has-error"
-                                name="date"
-                                placeholder="date"
+                                name="address"
+                                type="name"
+                                placeholder="주소"
+                                autoComplete="off"
                                 onChange={handleChange}
                                 required
                             />
-                            <div className="invalid-feedback">Password Field is required.</div>
+                            <div className="invalid-feedback">E-Mail field required.</div>
                         </div>
 
+                        <div className="mb-3">
+                            <label className="form-label">직업</label>
+                            <input
+                                className="form-control has-error"
+                                name="job"
+                                type="select"
+                                placeholder="직업"
+                                autoComplete="off"
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="invalid-feedback">Job field required.</div>
+                        </div>
 
-                        <div className="mb-2">
-                            <label className="form-check">
-                                <input type="checkbox" className="form-check-input" />
-                                <span className="form-check-label">Remember me</span>
-                            </label>
+                        <div className="mb-3">
+                            <label className="form-label">목적 (중복선택 가능)</label>
+                            <input
+                                className="has-error"
+                                name="purpose"
+                                type="checkbox"
+                                id="test1"
+                                onChange={handleChange}
+                                required
+                            />
+                            <label for="test1">test1</label>
+                            <br />
+                            <input
+                                className="has-error"
+                                name="purpose"
+                                type="checkbox"
+                                id="test1"
+                                onChange={handleChange}
+                                required
+                            />
+                            <label for="test1">test</label>
+                            <br />
+                            <input
+                                className="has-error"
+                                name="purpose"
+                                type="checkbox"
+                                id="test2"
+                                onChange={handleChange}
+                                required
+                            />
+                            <label for="test2">test2</label>
+                            <br />
+                            <input
+                                className="has-error"
+                                name="purpose"
+                                type="checkbox"
+                                id="test3"
+                                onChange={handleChange}
+                                required
+                            />
+                            <label for="test3">test3</label>
+                            <br />
+                            <div className="invalid-feedback">E-Mail field required.</div>
                         </div>
                         <div className="form-footer">
-                            <button type="submit" className="btn btn-primary btn-block" style={{ background: 'linear-gradient(to left, #B70000 0%, #144061 100%)' }}>
-                                Se connecter
-                        </button>
+                            <button type="submit" className="btn btn-primary btn-block">
+                                회원가입 하기
+                            </button>
                         </div>
                     </div>
                 </form>
-                <div className="hr-text">{`©${new Date().getFullYear()} LOC`}</div>
             </div>
         </div>
     </>
