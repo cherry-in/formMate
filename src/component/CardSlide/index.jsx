@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import rightArrow2 from "../../assets/rightArrow2.png";
-import Card from "../../component/Card/index";
+import Card from "../Card/index";
 
-const Cards = (props) => {
+const CardSlide = (props) => {
     const { title, list } = props;
     return (
         <div className="p-3">
@@ -18,4 +18,4 @@ const Cards = (props) => {
     );
 };
 
-export default Cards;
+export default CardSlide;

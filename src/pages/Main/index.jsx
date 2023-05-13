@@ -2,24 +2,11 @@ import React, { useState } from 'react';
 import './styles.scss';
 import Nav from '../../component/Nav/index';
 import Footer from '../../component/Footer/index';
+import Cards from '../../component/CardSlide';
+import Category from '../../component/Category';
 
 const Main = () => {
-
-    const [form, setForm] = useState({
-        email: '',
-        password: '',
-    })
-
-
-    const submit = (e) => {
-        e.preventDefault();
-        console.log(form);
-    }
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    }
-
+    const list = [{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" },{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }];
 
     return <>
         <div className="h-100">
@@ -35,6 +22,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+            <Cards title="작성 중인 계약서" list={list} />
+            <Cards title="인기 계약서" list={list} />
+            <Category />
             <Footer />
         </div>
     </>

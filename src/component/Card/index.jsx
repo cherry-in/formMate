@@ -6,7 +6,7 @@ const Card = (props) => {
   const { title, category, updated } = props.data;
   return (
     <div className="pl-3">
-      <div className="card" style={{ minWidth: "350px" }}>
+      <div className="card" style={{ width: "350px" }}>
         <div className="img-responsive img-responsive-21x9 card-img-top">
           <img src={image} />
         </div>
