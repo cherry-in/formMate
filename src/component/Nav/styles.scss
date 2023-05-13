@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+input, button {
+    font: inherit;
+}
+
+.bg-primary {
+    background-color: #3a5297 !important;
+
+/*     display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.text-white{
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 35px !important; 
+}
+
+.logo {
+    background-color:#3a5297;
+    background-image: url("https://i.ibb.co/2NnDCyf/image.png");
+    width:180px;
+    height:45px;
+    background-size: 100% 100%;
+
+    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-left:10%;
+    
+}
+
+
+.form-control-rounded{
+    margin-top: 38px;
+    height:40px;
+    width:350px;
+
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.input-icon .form-control-rounded{
+    background-image: url("https://i.ibb.co/FDvbQsy/image.png");
+    background-size: 100% 100%;
+}
+
+
+
+.login_signup{
+    margin-top: 45px;
+    margin-right:10%;
+}
+
+.line{
+    border:solid 1px #678ad5;
+    width: 93%;
+    margin: auto;
+    height: 1px;
+
+}
