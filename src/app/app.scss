@@ -1,11 +1,6 @@
 $primary: #3A5297;
 $danger: #cd201f;
 
-body,
-#root {
-    height: 100vh;
-}
-
 @import "scss/glossary-modal";
 @import "scss/tabler";
 @import "scss/tabler-buttons";
@@ -19,3 +14,27 @@ body,
 @import "scss/inbox-chat";
 @import "scss/record-pulse";
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
