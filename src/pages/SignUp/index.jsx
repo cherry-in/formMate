@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import './styles.scss';
 import axios from '../../axios'
 import Nav from '../../component/Nav/index';
+import bcrypt from 'bcryptjs'
+
+const salt = bcrypt.genSaltSync(10)
 
 const SignUp = () => {
 
     const [form, setForm] = useState({
-        name: '',
         email: '',
+        name: '',
         password: '',
-        date: '',
+        birth: '',
+        sex: '',
+        address: '',
+        job: '',
+        purpose: '',
     })
 
     const signUp = async () => {
@@ -20,8 +27,10 @@ const SignUp = () => {
     }
 
     const submit = (e) => {
+        let hashingForm = form;
+        hashingForm.password = bcrypt.hashSync(form.password, '$2a$10$CwTycUXWue0Thq9StjUM0u')
         e.preventDefault();
-        console.log(form);
+        console.log(hashingForm);
     }
 
     const handleChange = (e) => {
@@ -104,6 +113,7 @@ const SignUp = () => {
                                     type="text"
                                     className="form-control has-error"
                                     name="birth"
+                                    maxLength={6}
                                     placeholder=""
                                     onChange={handleChange}
                                     required
@@ -112,8 +122,9 @@ const SignUp = () => {
                                 <div className='p-2'>-</div>
                                 <input
                                     type="text"
-                                    className="form-control has-error w-1"
+                                    className="form-control has-error p-1 w-4"
                                     name="sex"
+                                    maxLength={1}
                                     placeholder=""
                                     onChange={handleChange}
                                     required
@@ -128,13 +139,13 @@ const SignUp = () => {
                             <input
                                 className="form-control has-error"
                                 name="address"
-                                type="name"
+                                type="text"
                                 placeholder="주소"
                                 autoComplete="off"
                                 onChange={handleChange}
                                 required
                             />
-                            <div className="invalid-feedback">E-Mail field required.</div>
+                            <div className="invalid-feedback">Address field required.</div>
                         </div>
 
                         <div className="mb-3">
@@ -161,7 +172,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <label for="test1">test1</label>
+                            <label htmlFor="test1">test1</label>
                             <br />
                             <input
                                 className="has-error"
@@ -171,7 +182,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <label for="test1">test</label>
+                            <label htmlFor="test1">test</label>
                             <br />
                             <input
                                 className="has-error"
@@ -181,7 +192,7 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <label for="test2">test2</label>
+                            <label htmlFor="test2">test2</label>
                             <br />
                             <input
                                 className="has-error"
@@ -191,12 +202,12 @@ const SignUp = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <label for="test3">test3</label>
+                            <label htmlFor="test3">test3</label>
                             <br />
-                            <div className="invalid-feedback">E-Mail field required.</div>
+                            <div className="invalid-feedback">Purpose field required.</div>
                         </div>
-                        <div className="form-footer">
-                            <button type="submit" className="btn btn-primary btn-block">
+                        <div className="text-center">
+                            <button type="submit" className="btn btn-primary">
                                 회원가입 하기
                             </button>
                         </div>

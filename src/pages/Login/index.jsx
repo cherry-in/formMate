@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Nav from '../../component/Nav/index';
 import './styles.scss';
+import bcrypt from 'bcryptjs'
+
+const salt = bcrypt.genSaltSync(10)
 
 const Login = () => {
 
@@ -11,8 +14,10 @@ const Login = () => {
 
 
     const submit = (e) => {
+        let hashingForm = form;
+        hashingForm.password = bcrypt.hashSync(form.password, '$2a$10$CwTycUXWue0Thq9StjUM0u')
         e.preventDefault();
-        console.log(form);
+        console.log(hashingForm);
     }
 
     const handleChange = (e) => {
@@ -25,12 +30,12 @@ const Login = () => {
             <Nav />
             <div className="" /* style="position:relative" */>
                 <div className="filling"></div>
-                <form className="login-card card-md bg-transparent needs-validation" onSubmit={submit} autoComplete="on" /* style="position:absolute" */ noValidate>
+                <form className="login-card card-md bg-transparent needs-validation" onSubmit={submit} autoComplete="on" noValidate>
                     <div className="login-card-body">
-                        <div class="bg-img"></div>
+                        <div className="bg-img"></div>
 
-                        <h3 className="text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
-                        <h1 className='text-blue text-center mb-5'>FormMate와 함께!</h1>
+                        <h3 className="login-h3 text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
+                        <h1 className='login-h1 text-blue text-center mb-5'>FormMate와 함께!</h1>
 
                         <div className="mb-3">
                             <input
@@ -55,8 +60,8 @@ const Login = () => {
                             />
                             <div className="invalid-feedback">Password Field is required.</div>
                         </div>
-                        <div className="form-footer">
-                            <button type="submit" className="btn btn-primary btn-block" >
+                        <div className="login-form-footer">
+                            <button type="submit" className="login-button btn btn-primary btn-block" >
                                 로그인
                                 <div className=''></div>
                             </button>
