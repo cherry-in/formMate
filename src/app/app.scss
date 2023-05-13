@@ -19,6 +19,13 @@ $danger: #cd201f;
     text-overflow: ellipsis;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 html {
