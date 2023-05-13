@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import Nav from '../../component/Nav/index';
+import Footer from '../../component/Footer/index';
 
 const Main = () => {
 
@@ -44,7 +45,7 @@ const Main = () => {
                         <div className="mb-2">
                             <label className="form-label">
                                 Password
-                        </label>
+                            </label>
                             <input
                                 type="password"
                                 className="form-control has-error"
@@ -64,12 +65,13 @@ const Main = () => {
                         <div className="form-footer">
                             <button type="submit" className="btn btn-primary btn-block" style={{ background: 'linear-gradient(to left, #B70000 0%, #144061 100%)' }}>
                                 Se connecter
-                        </button>
+                            </button>
                         </div>
                     </div>
                 </form>
                 <div className="hr-text">{`©${new Date().getFullYear()} X-SLAYERgit `}</div>
             </div>
+            <Footer />
         </div>
     </>
 }
