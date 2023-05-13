@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import Nav from '../../component/Nav/index';
+import Footer from "../../component/Footer/index";
+import Cards from '../../component/Cards';
+import Category from '../../component/Category';
+import SearchInput from '../../component/SearchInput';
 
 const Search = () => {
 
@@ -9,69 +13,27 @@ const Search = () => {
         password: '',
     })
 
+    const list = [{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" },{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }];
 
-    const submit = (e) => {
-        e.preventDefault();
-        console.log(form);
-    }
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    }
-
-
-    return <>
-        <div className="flex-fill d-flex flex-column justify-content-center">
-
-            <div className="container-tight py-6">
-                <form className="card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
-                    <div className="card-body">
-                        <h2 className="mb-5 text-center text-uppercase">Search</h2>
-
-                        <div className="mb-3">
-                            <label className="form-label">E-Mail</label>
-                            <input
-                                className="form-control has-error"
-                                name="email"
-                                type="email"
-                                placeholder="Enter your email address"
-                                autoComplete="off"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">E-Mail field required.</div>
-                        </div>
-                        <div className="mb-2">
-                            <label className="form-label">
-                                Password
-                        </label>
-                            <input
-                                type="password"
-                                className="form-control has-error"
-                                name="password"
-                                placeholder="Password"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">Password Field is required.</div>
-                        </div>
-                        <div className="mb-2">
-                            <label className="form-check">
-                                <input type="checkbox" className="form-check-input" />
-                                <span className="form-check-label">Remember me</span>
-                            </label>
-                        </div>
-                        <div className="form-footer">
-                            <button type="submit" className="btn btn-primary btn-block" style={{ background: 'linear-gradient(to left, #B70000 0%, #144061 100%)' }}>
-                                Se connecter
-                        </button>
-                        </div>
-                    </div>
-                </form>
-                <div className="hr-text">{`©${new Date().getFullYear()} X-SLAYERgit `}</div>
+    return (
+        <div className="">
+            <div className="flex-container">
+                <div className="">
+                    <Nav />
+                </div>
             </div>
+            <div className='bg-primary p-5 text-center'>
+                <h2 className="text-white">
+                    일상 속에서 신뢰가 필요할 때,
+                </h2>
+                <h1 className='text-yellow'>FormMate와 간편하게 계약서 작성</h1>
+                <SearchInput />
+            </div>
+            <Cards title="인기 계약서" list={list} />
+            <Category />
+            <Footer />
         </div>
-    </>
-}
+    );
+};
 
 export default Search;
