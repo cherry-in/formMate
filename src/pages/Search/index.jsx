@@ -1,29 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import './styles.scss';
-import Nav from '../../component/Nav/index';
-import Footer from "../../component/Footer/index";
-import Cards from '../../component/CardGrid';
-import Category from '../../component/Category';
-import SearchInput from '../../component/SearchInput';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Cards from '../../component/CardGrid';
+import Footer from "../../component/Footer/index";
+import Nav from '../../component/Nav/index';
+import SearchInput from '../../component/SearchInput';
 import { BACKEND_URI } from '../../constant';
+import './styles.scss';
 
 const Search = () => {
+    const [searchString, setSearchString] = useState("")
+    const [from, setFrom] = useState(0)
+    const [loading, setLoading] = useState(false)
     const [list, setList] = useState([])
-    const data = [{ id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }, { id: "asdf", title: "test", category: "고용계약서", updated: "2023-05-12 22:47" }];
-    useEffect(() => {
+    const onClick = () => {
         ///api
-        axios.get(`${BACKEND_URI}/`, { 'Content-Type': 'application/json' },).then(({ data }) => {
-            console.log(data);
-            return JSON.stringify(data, null, 2);
-        }).catch(err => console.error(err));
-        setList(data);
-    }, []);
-    const add = () => { setList([...list, ...data]) }
+        setLoading(true)
+        console.log({ searchString, from, size: 10 })
+        axios.post(`${BACKEND_URI}/form/search`, { searchString, from, size: 10 }, { 'Content-Type': 'application/json' })
+            .then(({ data }) => {
+                setList([...data])
+                setFrom(0)
+                setLoading(false)
+            }).catch(err => console.error(err));
+    }
+    const add = () => {
+        if (!loading) {
+            setLoading(true)
+            console.log()
+            axios.post(`${BACKEND_URI}/form/search`, { searchString, from: from + 10, size: 10 }, { 'Content-Type': 'application/json' })
+                .then(({ data }) => {
+                    console.log(data)
+                    setList([...list, ...data])
+                    setFrom(from + 10)
+                    setLoading(false)
+                }).catch(err => console.error(err));
+        }
+    }
     return (
         <div className="text-center">
             <Nav />
-            <SearchInput className="bg-blue" />
+            <SearchInput searchString={searchString} setSearchString={setSearchString} onClick={onClick} className="bg-blue" />
             <div className='bg-primary p-5 text-center'>
                 <h2 className="text-white">
                     일상 속에서 신뢰가 필요할 때,
