@@ -41,179 +41,171 @@ const SignUp = () => {
     return <>
         <div className="flex-fill d-flex flex-column justify-content-center">
             <Nav />
-            <div className="container-tight py-6">
-                <form className="card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
-                    <div className="card-body">
-                        <h3 className="text-center text-uppercase">무료로 빠른 계약서 작성,</h3>
-                        <h1 className='text-blue text-center mb-5'>FormMate와 함께!</h1>
+            <div className="filling"></div>
+            <form className="signup-card card card-md needs-validation" onSubmit={submit} autoComplete="off" noValidate>
+                <div className="signup-card-body card-body">
+                    <h3 className="text-center text-uppercase signup-text-black">무료로 빠른 계약서 작성,</h3>
+                    <h1 className='text-blue text-center mb-5 signup-text-blue'>FormMate와 함께!</h1>
 
-                        <div className="mb-3">
-                            <label className="form-label">이메일 주소</label>
-                            <input
-                                className="form-control has-error"
-                                name="email"
-                                type="email"
-                                placeholder="이메일"
-                                autoComplete="off"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">E-Mail field required.</div>
-                        </div>
+                    <div className="mb-3 signup-form-set">
+                        <label className="form-label signup-form-label">이메일 주소</label>
+                        <input
+                            className="form-control has-error signup-form-blank"
+                            name="email"
+                            type="email"
+                            placeholder="  example@skycc.kr"
+                            autoComplete="off"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">E-Mail field required.</div>
+                    </div>
 
-                        <div className="mb-3">
-                            <label className="form-label">이름</label>
-                            <input
-                                className="form-control has-error"
-                                name="name"
-                                type="name"
-                                placeholder="이름"
-                                autoComplete="off"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">Name field required.</div>
-                        </div>
+                    <div className="mb-3 signup-form-set">
+                        <label className="form-label signup-form-label">이름</label>
+                        <input
+                            className="form-control has-error signup-form-blank"
+                            name="name"
+                            type="name"
+                            placeholder="  성명입력"
+                            autoComplete="off"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">Name field required.</div>
+                    </div>
 
-                        <div className="mb-2">
-                            <label className="form-label">
-                                비밀번호
-                            </label>
-                            <input
-                                type="password"
-                                className="form-control has-error"
-                                name="password"
-                                placeholder="비밀번호"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">Password Field is required.</div>
-                        </div>
-                        <div className="mb-2">
-                            <label className="form-label">
-                                비밀번호 재확인
-                            </label>
-                            <input
-                                type="password"
-                                className="form-control has-error"
-                                name="password"
-                                placeholder="비밀번호"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">Password Field is required.</div>
-                        </div>
+                    <div className="mb-2 signup-form-set">
+                        <label className="form-label signup-form-label">
+                            비밀번호
+                        </label>
+                        <input
+                            type="password"
+                            className="form-control has-error signup-form-blank"
+                            name="password"
+                            placeholder="  ********"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">Password Field is required.</div>
+                    </div>
+                    <div className="mb-2 signup-form-set">
+                        <label className="form-label signup-form-label">
+                            비밀번호 재확인
+                        </label>
+                        <input
+                            type="password"
+                            className="form-control has-error signup-form-blank"
+                            name="password"
+                            placeholder="  ********"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">Password Field is required.</div>
+                    </div>
 
-                        <div className="mb-2">
-                            <label className="form-label">
-                                주민등록번호 (뒷자리 첫번째까지)
-                            </label>
-                            <div className='d-flex'>
-                                <input
-                                    type="text"
-                                    className="form-control has-error"
-                                    name="birth"
-                                    maxLength={6}
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <div className="invalid-feedback">Password Field is required.</div>
-                                <div className='p-2'>-</div>
-                                <input
-                                    type="text"
-                                    className="form-control has-error p-1 w-4"
-                                    name="sex"
-                                    maxLength={1}
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    required
-                                />
-                                XXXXXX
-                                <div className="invalid-feedback">Password Field is required.</div>
-                            </div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">주소</label>
+                    <div className="mb-2 signup-form-set">
+                        <label className="form-label signup-form-label">
+                            주민등록번호 (뒷자리 첫번째까지)
+                        </label>
+                        <div className='d-flex'>
                             <input
-                                className="form-control has-error"
-                                name="address"
                                 type="text"
-                                placeholder="주소"
-                                autoComplete="off"
+                                className="form-control has-error signup-form-blank signup-form-blank-idnumfront"
+                                name="birth"
+                                maxLength={6}
+                                placeholder="   ⚫︎    ⚫︎    ⚫︎    ⚫︎    ⚫︎    ⚫︎ "
                                 onChange={handleChange}
                                 required
                             />
-                            <div className="invalid-feedback">Address field required.</div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">직업</label>
+                            <div className="invalid-feedback">Password Field is required.</div>
+                            <div className='p-2, signup-form-blank-hiphen'>-</div>
                             <input
-                                className="form-control has-error"
-                                name="job"
-                                type="select"
-                                placeholder="직업"
-                                autoComplete="off"
+                                type="text"
+                                className="form-control has-error p-1 w-4 signup-form-blank signup-form-blank-idnumback"
+                                name="sex"
+                                maxLength={1}
+                                placeholder="   ⚫︎"
                                 onChange={handleChange}
                                 required
                             />
-                            <div className="invalid-feedback">Job field required.</div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">목적 (중복선택 가능)</label>
-                            <input
-                                className="has-error"
-                                name="purpose"
-                                type="checkbox"
-                                id="test1"
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="test1">test1</label>
-                            <br />
-                            <input
-                                className="has-error"
-                                name="purpose"
-                                type="checkbox"
-                                id="test1"
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="test1">test</label>
-                            <br />
-                            <input
-                                className="has-error"
-                                name="purpose"
-                                type="checkbox"
-                                id="test2"
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="test2">test2</label>
-                            <br />
-                            <input
-                                className="has-error"
-                                name="purpose"
-                                type="checkbox"
-                                id="test3"
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="test3">test3</label>
-                            <br />
-                            <div className="invalid-feedback">Purpose field required.</div>
-                        </div>
-                        <div className="text-center">
-                            <button type="submit" className="btn btn-primary">
-                                회원가입 하기
-                            </button>
+                            <p className="signup-form-idbacknum-xpadding"></p>
+                            <div className="invalid-feedback">Password Field is required.</div>
                         </div>
                     </div>
-                </form>
-            </div>
+
+                    <div className="mb-3 signup-form-set">
+                        <label className="form-label signup-form-label">주소</label>
+                        <input
+                            className="form-control has-error signup-form-blank"
+                            name="address"
+                            type="text"
+                            placeholder="  상세주소입력"
+                            autoComplete="off"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">Address field required.</div>
+                    </div>
+
+                    <div className="mb-3 signup-form-set">
+                        <label className="form-label signup-form-label">직업</label>
+                        <input
+                            className="form-control has-error signup-form-blank"
+                            name="job"
+                            type="select"
+                            placeholder="  직업입력"
+                            autoComplete="off"
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className="invalid-feedback">Job field required.</div>
+                    </div>
+
+                    <div className="mb-3 signup-form-set">
+                        <label className="form-label signup-form-label">목적 (중복선택 가능)</label>
+                        <input
+                            className="has-error"
+                            name="purpose"
+                            type="checkbox"
+                            id="test1"
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="test1" className="signup-form-usechecklist-item">과외</label>
+                        <br />
+                        <input
+                            className="has-error"
+                            name="purpose"
+                            type="checkbox"
+                            id="test2"
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="test2" className="signup-form-usechecklist-item">중고거래</label>
+                        <br />
+                        <input
+                            className="has-error"
+                            name="purpose"
+                            type="checkbox"
+                            id="test3"
+                            onChange={handleChange}
+                            required
+                        />
+                        <label htmlFor="test3" className="signup-form-usechecklist-item">기타</label>
+                        <br />
+                        <div className="invalid-feedback">Purpose field required.</div>
+                    </div>
+
+                    <a className="text-center signup-button">
+                        <button type="submit" className="btn btn-primary signup-button signup-button-div">
+                            <span className="signup-button-text"> 회원가입 하기 </span>
+                            <img className="signup-button-img" src="https://i.ibb.co/NLCczcn/image.png"></img>
+                        </button>
+                    </a>
+
+                </div>
+            </form>
         </div>
     </>
 }
