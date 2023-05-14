@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif
+}
+
+.login-input, button {
+    font: inherit;
+}
+
+
+.filling{
+    width:100%;
+    height:230px;
+    background-color: #3a5297;
+}
+
+.main-container {
+    
+    display: block;
+    margin:auto;
+}
+
+.main-card {
+    width:92%;
+    position: relative;
+    top:-200px;
+
+
+    display:block;
+    margin:auto;
+
+
+    border:none;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px 0px hsl(0, 0%, 0%, 0.25);
+
+    margin-bottom:0;
+}
+
+.main-card-body {
+    width: 95%;
+
+    display: block;
+    margin:auto;
+
+    border:none;
+
+}
+
+.main-card-body-text {
+    font-size: 35px;
+    color: black;
+    font-weight: lighter;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    padding:0;
+    line-height: 1.1em;
+    margin:0;
+    margin-top: 50px;
+}
+
+.main-card-body-title {
+    font-size: 80px;
+    color: black !important;
+    font-weight: bold;
+    line-height: 1.1em;
+
+    padding:0;
+    margin:0;
+    margin-bottom: 120px;
+}
+
+.main-card-button {
+    width : 200px;
+}
+
+.main-card-button-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 330px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #3a5297;
+    margin-bottom: 70px;
+}
+
+.main-card-button-text {
+    background-color: #3a5297;
+    font-size: 27px !important;
+    color: white;
+
+    padding:0;
+    margin:0;
+    margin-left: 15px;
+}
+
+.main-card-button-img {
+    background-color:white;
+    background-image: url("https://i.ibb.co/KwGZHQr/image.png");
+    width:50px;
+    height:50px;
+    object-fit: cover;
+   /*  background-size: 100% 100%; */
+
+   padding:0;
+   margin:0;
+}
