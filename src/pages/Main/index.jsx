@@ -12,7 +12,7 @@ const Main = () => {
         <div className="h-100">
             <Nav />
             <div className="filling"></div>
-            <div className="card main-card">
+            <div className="card main-card main-card-with-img">
                 <div className="card-body main-card-body">
                     <p className="main-card-body-text text-">복잡하고 어려운 계약서 작성은</p>
                     <h1 className="main-card-body-title card-title">
@@ -26,6 +26,8 @@ const Main = () => {
                     </a>
                     {/* <a href="/workspace/new" className="main-card-btn btn btn-primary">계약서 작성하러 가기</a> */}
                 </div>
+
+                <img className="main-computer-img" src="https://i.ibb.co/kHY2Tcf/image.png"></img>
             </div>
             <Cards title="작성 중인 계약서" list={list} />
             <Cards title="인기 계약서" list={list} />
