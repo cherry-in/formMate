@@ -21,6 +21,7 @@ const Login = () => {
         e.preventDefault();
         return axios.post(`${BACKEND_URI}/auth/login`, hashingForm, { 'Content-Type': 'application/json' },).then(({ data }) => {
             console.log(data);
+            window.location.href="/";
             return JSON.stringify(data, null, 2);
         }).catch(err => console.error(err));
         console.log(hashingForm);
