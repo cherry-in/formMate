@@ -9,15 +9,15 @@ const Footer = () => {
         <tbody>
           <tr>
             <td>BE</td>
-            <td>김채린</td>
+            <td>박지호</td>
           </tr>
           <tr>
             <td>FE</td>
-            <td>김채린</td>
+            <td>김채린 권성현</td>
           </tr>
           <tr>
             <td>DESIGN</td>
-            <td>김채린</td>
+            <td>제지윤</td>
           </tr>
         </tbody>
       </table>
