@@ -55,10 +55,10 @@ const Workspace = () => {
         switch (btn) {
             case "+":
                 item.content = "";
-                list.splice(i + 1, 0, item);
+                list.splice(i + 1, 1, item);
                 break;
             case "*":
-                list.splice(i + 1, 0, item);
+                list.splice(i + 1, 1, item);
                 break;
             case "-":
                 list.splice(i, 1);
