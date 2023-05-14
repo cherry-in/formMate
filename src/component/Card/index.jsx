@@ -5,7 +5,7 @@ import image from "../../assets/image.png";
 const Card = (props) => {
   const { title, category, updated } = props.data;
   return (
-    <div className="pl-3">
+    <a href="/workspace/8384fa97-d607-4af5-ac66-dabf51c19f1c" className="pl-3">
       <div className="card" style={{ width: "350px" }}>
         <div className="img-responsive img-responsive-21x9 card-img-top">
           <img src={image} />
@@ -24,7 +24,7 @@ const Card = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 export default Card;
