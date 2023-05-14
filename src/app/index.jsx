@@ -17,7 +17,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Main} />
                 <Route exact path="/search" component={Search} />
-                <Route exact path="/workspace/:id" component={Workspace} />
+                <Route exact path="/workspace/:formId" component={Workspace} />
                 <Route exact path="/mypage" component={Mypage} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={SignUp} />

@@ -102,60 +102,11 @@ const SignUp = () => {
                         <div className="invalid-feedback">Password Field is required.</div>
                     </div>
 
-<<<<<<< HEAD
                     <div className="mb-2 signup-form-set">
                         <label className="form-label signup-form-label">
                             주민등록번호 (뒷자리 첫번째까지)
                         </label>
                         <div className='d-flex'>
-=======
-                        <div className="mb-2">
-                            <label className="form-label">
-                                주민등록번호 (뒷자리 첫번째까지)
-                            </label>
-                            <div className='d-flex'>
-                                <input
-                                    type="text"
-                                    className="form-control has-error"
-                                    name="birth"
-                                    maxLength={6}
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <div className="invalid-feedback">Password Field is required.</div>
-                                <div className='p-2'>-</div>
-                                <input
-                                    type="text"
-                                    className="form-control has-error p-1 w-4"
-                                    name="sex"
-                                    maxLength={1}
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    required
-                                />
-                                XXXXXX
-                                <div className="invalid-feedback">Password Field is required.</div>
-                            </div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">연락처</label>
-                            <input
-                                className="form-control has-error"
-                                name="contact"
-                                type="text"
-                                placeholder="연락처"
-                                autoComplete="off"
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className="invalid-feedback">Address field required.</div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label className="form-label">주소</label>
->>>>>>> 35789f6c5c0702d6f8ab7a7694116cc9938f612b
                             <input
                                 type="text"
                                 className="form-control has-error signup-form-blank signup-form-blank-idnumfront"
@@ -180,6 +131,20 @@ const SignUp = () => {
                             <div className="invalid-feedback">Password Field is required.</div>
                         </div>
                     </div>
+                    
+                    <div className="mb-2 signup-form-set">
+                            <label className="form-label signup-form-label">연락처</label>
+                            <input
+                                className="form-control has-error signup-form-blank"
+                                name="contact"
+                                type="text"
+                                placeholder="연락처"
+                                autoComplete="off"
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="invalid-feedback">Address field required.</div>
+                        </div>
 
                     <div className="mb-3 signup-form-set">
                         <label className="form-label signup-form-label">주소</label>

@@ -1,0 +1,11 @@
+.item {
+    .option {
+        visibility: hidden;
+    }
+
+    &:hover {
+        .option {
+            visibility: visible;
+        }
+    }
+}
